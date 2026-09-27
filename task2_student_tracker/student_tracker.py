@@ -9,7 +9,6 @@ exam eligibility, and prints a clean report card.
 
 
 def get_grade(average):
-    """Return a letter grade based on the average marks."""
     if average >= 80:
         return "A"
     elif average >= 70:
@@ -21,12 +20,10 @@ def get_grade(average):
 
 
 def get_attendance_percentage(classes_held, classes_attended):
-    """Return attendance as a percentage."""
     return (classes_attended / classes_held) * 100
 
 
 def get_valid_float(prompt, min_value=0, max_value=100):
-    """Ask for a float within a range, keep asking until valid."""
     while True:
         try:
             value = float(input(prompt))
@@ -38,7 +35,6 @@ def get_valid_float(prompt, min_value=0, max_value=100):
 
 
 def get_valid_int(prompt, min_value=0):
-    """Ask for a whole number, keep asking until valid."""
     while True:
         try:
             value = int(input(prompt))
@@ -50,7 +46,6 @@ def get_valid_int(prompt, min_value=0):
 
 
 def collect_subject_marks(num_subjects=3):
-    """Ask the user for marks in a number of subjects. Returns a dictionary."""
     subjects = {}
     print(f"\nEnter marks for {num_subjects} subjects:")
     for i in range(num_subjects):
@@ -61,7 +56,6 @@ def collect_subject_marks(num_subjects=3):
 
 
 def collect_attendance():
-    """Ask the user for total classes held and attended. Returns (held, attended)."""
     print("\n--- Attendance Information ---")
     while True:
         classes_held = get_valid_int("Enter total classes held: ", min_value=1)
@@ -76,7 +70,6 @@ def collect_attendance():
 
 def print_report(name, roll_number, subjects, average, grade,
                   attendance, eligibility):
-    """Print the final student report card."""
     print("\n====================================")
     print("          STUDENT REPORT")
     print("====================================")
