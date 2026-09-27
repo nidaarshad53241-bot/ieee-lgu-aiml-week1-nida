@@ -60,14 +60,14 @@ def play_round():
         attempts_left -= 1
 
         if guess == secret_number:
-            print(f"\n🎉 Congratulations! You guessed it in {guess_count} tries!")
+            print(f"\nCongratulations! You guessed it in {guess_count} tries!")
             return True
         elif guess < secret_number:
             print(f"Too Low! Try a bigger number. ({attempts_left} attempts left)\n")
         else:
             print(f"Too High! Try a smaller number. ({attempts_left} attempts left)\n")
 
-    print(f"\n😢 Out of attempts! The secret number was {secret_number}.")
+    print(f"\nOut of attempts! The secret number was {secret_number}.")
     return False
 
 
@@ -94,8 +94,8 @@ def main():
     print("====================================")
     print(f"Rounds played: {rounds_played}")
     print(f"Rounds won:    {wins}")
-    print("Thanks for playing! 👋")
+    print("Thanks for playing!")
 
 
 if __name__ == "__main__":
-    main()
+    main() 
